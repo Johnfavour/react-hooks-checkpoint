@@ -1,12 +1,15 @@
+// MovieCard.js
 import React from 'react';
+import './MovieCard.css'
 
-function MovieCard({title, description, posterUrl, rating }) {
+function MovieCard({ movie }) {
   return (
     <div className="moviecard">
-      <img src={posterUrl} alt={title} />
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <p>Rating: {rating}</p>
+      <img src={movie.posterURL} alt={movie.title} style={{paddingTop: '15px'}}/>
+      <h2>{movie.title}</h2>
+      <p>{movie.description}</p>
+      <p style={{paddingBottom:'15px'}}>Rating: {movie.rating}</p>
+
     </div>
   );
 }
